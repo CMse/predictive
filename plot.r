@@ -1,0 +1,8 @@
+staging<-read.csv("C:\\Users\\t595476\\Downloads\\EURUSD-2016-01.csv", header=FALSE, sep=",")
+colnames(staging)<-c('ccy_pair','time','bid','ask')
+plot.new()
+plot(ask~time, staging, xaxt="n",type="l")
+title(main="2015Q4 [Advance]", sub="Jan 29 2016")
+abline(v=4959, col="red")
+dev.copy(png,"C:\\Users\\t595476\\Downloads\\2015q4.png")
+dev.off() 
